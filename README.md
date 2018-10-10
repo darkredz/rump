@@ -1,8 +1,18 @@
 <h1 align="center">
-<img src="https://rawgit.com/jdorfman/rump/master/assets/images/rump_logo.svg">
+<img src="https://rawgit.com/mytokenio/rump/master/assets/images/mytoken.png">
+<img src="https://rawgit.com/mytokenio/rump/master/assets/images/rump_logo.svg">
 </h1>
 
 Hot sync two Redis databases using dumps.
+
+## Fork Update
+
+support redis auth
+
+support ttl sync
+
+sync speed control
+
 
 ## Why
 
@@ -33,7 +43,6 @@ Rump is able to transfer keys from an ElastiCache cluster or any Redis server to
 
 - Uses `SCAN` instead of `KEYS` to avoid DoS your own server.
 - Can sync any key type.
-- Drops the TTL on purpose, since it wouldn't be in sync.
 - Doesn't use any temp file.
 - Uses buffered channels to optimize slow source servers.
 - Uses pipelines to minimize network roundtrips.
